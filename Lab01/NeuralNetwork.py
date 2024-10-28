@@ -38,12 +38,12 @@ class NeuralNetwork:
             torch.zeros(layer.biases.shape, device=self.device) for layer in self.layers
         ]
 
-        #compute delta(error) for the output layer
+        #compute delta for the output layer
         delta = self.layers[-1].activated_output - expected_result.unsqueeze(-1)
         biases_update[-1] = delta
         weights_update[-1] = torch.matmul(delta, self.layers[-2].activated_output.T)
 
-        #backpropagate through the remaining layers (excluding input layer)
+        #backpropagate through the hidden layers
         for l in range(len(self.layers) - 2, 0, -1):
             delta = torch.matmul(self.layers[l + 1].weights.t(), delta) * self.layers[l].activation_derivative(self.layers[l].output)
             biases_update[l] = delta
@@ -56,7 +56,7 @@ class NeuralNetwork:
 
         return weights_update, biases_update
 
-    def train_mini_batch(self, data_set, max_iterations=10, batch_size=10, learning_rate=0.01):
+    def train(self, data_set, max_iterations=10, batch_size=10, learning_rate=0.01):
 
         batch_count = len(data_set) // batch_size
 
@@ -128,7 +128,7 @@ if __name__ == '__main__':
     MAX_ITERATION = 1
     BATCH_SIZE = 32
     LEARNING_RATE = 0.5
-    model.train_mini_batch(dataset.training_set, MAX_ITERATION, BATCH_SIZE, LEARNING_RATE)
+    model.train(dataset.training_set, MAX_ITERATION, BATCH_SIZE, LEARNING_RATE)
 
     print('Training set:')
     model.test_model(dataset.training_set)
