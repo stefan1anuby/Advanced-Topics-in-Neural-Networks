@@ -47,3 +47,14 @@ Each configuration was run with a unique combination of these parameters, and me
 
 > Note: For detailed graphs and metrics for each configuration, please check each configuration link.
 
+![image](https://github.com/user-attachments/assets/c236a80d-2992-4f2c-ba5f-f4bd75cb2e73)
+![image](https://github.com/user-attachments/assets/7e93f275-dbb4-4bca-9431-9dd628fc5b33)
+![image](https://github.com/user-attachments/assets/32624dd4-bd85-44df-aaee-d9fca6188565)
+![image](https://github.com/user-attachments/assets/85c02601-2dd6-4db0-99cd-c0ed3effbde7)
+![image](https://github.com/user-attachments/assets/0957f3d4-0dfc-4809-b258-e8602d0dcfe6)
+![image](https://github.com/user-attachments/assets/a4d0ff13-b366-40f6-b226-17fab644fddf)
+![image](https://github.com/user-attachments/assets/ca8b3b7e-6d13-40a6-b941-b16869abd939)
+![image](https://github.com/user-attachments/assets/1ac61f41-1b12-4731-9369-5ead72bcd3fc)
+
+
+
